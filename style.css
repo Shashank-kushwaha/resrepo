@@ -1,0 +1,217 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+.container{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #2a2a72;
+background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.logo{
+    font-size: 22px;
+    color: white;
+    letter-spacing: 10px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav ul li{
+    padding: 0px 10px;
+}
+.nav ul li a{
+    text-decoration: none;
+    padding: 8px;
+    color: white;
+}
+.nav ul li a:hover{
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.6s ease;
+}
+.container .menu-btn i{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+    margin-right: 40%;
+}
+.home img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 33px;
+    color: white;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 15%;
+    padding: 10px;
+    color: blue;
+    border-radius: 10px;
+    background-color: aqua;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color: white;
+    margin-bottom: 5%;
+    font-size: 18px;
+    letter-spacing: 10px;
+  }
+.about{
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    text-align: center;
+}
+.about p{
+    padding: 50px;
+    font-size: 18px;
+}
+.language{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.language .box1 img{
+    width: 250px;
+    height: 150px;
+}
+.contact{
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    margin-top: 5%;
+    text-align: center;
+}
+.contact h2{
+    padding-top: 20px;
+}
+#email{
+    padding: 5px;
+    width: 20%;
+    height: 35px;
+    margin-top: 4%;
+}
+#password{
+    padding: 5px;
+    width: 20%;
+    height: 35px;
+}
+#massage{
+    padding: 5px;
+    width: 20%;
+}
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: #d5adc8;
+background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+    padding: 20px;
+    text-align: center;
+}
+.footer p{
+    font-size: 18px;
+}
+
+
+
+
+@media (max-width: 940px){
+    .container .menu-btn i{
+        display: block;
+        line-height: 80px;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    .nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #f8ceec;
+background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ .nav ul{
+        left: 0%;
+    }
+    
+    .nav ul li{
+        margin: 20px 0px;
+    }
+    .nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    /* .home img{
+        width: 100%;
+        height: auto;
+    } */
+    .content{
+        color: white;
+        font-size: 15px;
+        margin-top: -35%;
+    }
+    .btn{
+        border-radius: 10px;
+        background-color: aqua;
+        margin-top: -10%;
+    }
+    .bottom-right {
+        display: none;
+      } 
+
+      .contact{
+        width: 100%;
+        height: auto;
+
+    }
+    .contact h2{
+        padding-top: 20px;
+    }
+    #email{
+        padding: 5px;
+        width: 40%;
+        height: 35px;
+        margin-top: 4%;
+    }
+    #password{
+        padding: 5px;
+        width: 40%;
+        height: 35px;
+    }
+    #massage{
+        padding: 5px;
+        width: 40%;
+    }
+}
